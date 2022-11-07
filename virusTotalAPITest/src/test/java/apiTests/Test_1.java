@@ -2,7 +2,8 @@ package apiTests;
 
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class Test_1 {
@@ -12,8 +13,13 @@ public class Test_1 {
     @Test
     public void test_Step_1() {
         baseURI = "https://www.virustotal.com/api";
-        given().header("x_apikey", apiKey).when().get("/v3/ip_addresses/" + ip).then().statusCode(200)
-                .body("data.attributes.last_analysis_stats.suspicious",equalTo(0))
+        given().
+                header("x_apikey", apiKey).when().get("/v3/ip_addresses/" + ip).
+        then().
+                statusCode(200)
+                .body("data.attributes.last_analysis_stats.malicious", equalTo(0))
                 .log().all();
     }
 }
+
+

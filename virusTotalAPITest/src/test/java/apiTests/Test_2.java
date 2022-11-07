@@ -43,9 +43,9 @@ public class Test_2 {
         given()
                 .header("x-apikey", apiKey)
                 .body(map3).
-                when().
+        when().
                 post("https://www.virustotal.com/api/v3/ip_addresses/" + ip + "/comments").
-                then()
+        then()
                 .statusCode(200)
                 .log().all();
     }
