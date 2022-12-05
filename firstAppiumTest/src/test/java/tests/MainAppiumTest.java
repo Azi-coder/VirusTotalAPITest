@@ -17,7 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
-public class BaseAppiumTest {
+public class MainAppiumTest {
 
     AppiumDriver driver;
     HomePage homePage;

@@ -4,7 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AppiumTest2 extends BaseAppiumTest{
+public class AppiumTest2 extends MainAppiumTest {
     AppiumDriver driver;
 
     @Test
