@@ -13,7 +13,5 @@ public class SuperPricePage {
     public void selectProduct(){
         driver.findElement(urun).click();
     }
-    public void clickLikeButton(){
 
-    }
 }
